@@ -34,7 +34,6 @@ export default function Home() {
 
   useEffect(() => {
     const fetchLastDate = async () => {
-      console.log(process.env.NEXT_PUBLIC_API_URL)
       const lastDate = await axios.get(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/time');
       const targetDateTime = new Date(lastDate.data.lastDate);
 
